@@ -2,11 +2,6 @@
 .grid{
     display : grid;        
     border : 2px solid black;
-    height : 1000px;
-    width: 1000px;
-}
-
-.cell{
-    border : 1px solid black;
-   
+    height : 400px;
+    width: 400px;
 }
