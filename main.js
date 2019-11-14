@@ -1,13 +1,16 @@
-const number = 256;
 const myGrid = document.querySelector(".grid");
-
-for (let i = 1; i <= number; i++){
-    const myGridDiv = document.createElement("div");
-    myGridDiv.textContent = i;
-    myGridDiv.classList.add("box");
-    myGridDiv.setAttribute("id", i);
-    myGrid.appendChild(myGridDiv);
+function buildGrid(number){
+    let squareNumber = number * number;
+    myGrid.setAttribute("style", "grid-template-columns : repeat("+ number + ",1fr); grid-template-rows : repeat("+ number + ", 1fr)")
+    for (let i = 1; i <= squareNumber; i++){
+        const myGridDiv = document.createElement("div");
+        myGridDiv.textContent = i;
+        myGridDiv.classList.add("box");
+        myGridDiv.setAttribute("id", i);
+        myGrid.appendChild(myGridDiv);
+    }
 }
+
 
 const myDiv = document.querySelectorAll(".box");
 
@@ -16,7 +19,7 @@ const myDiv = document.querySelectorAll(".box");
 //    alert(test.id);
 //});
 
-myDiv[number-1].style.backgroundColor = "red";
+myDiv[8].style.backgroundColor = "red";
 myDiv.forEach((div) => {
     div.addEventListener('mouseenter', (e) => {
         e.target.style.backgroundColor = "blue";
@@ -25,3 +28,7 @@ myDiv.forEach((div) => {
 myDiv.addEventListener("mouseenter", function(e){
     e.target.style.backgroundColor = "blue";
 });
+
+const reset = document.querySelector(".reset");
+
+reset.onclick = () => alert("suh up");
