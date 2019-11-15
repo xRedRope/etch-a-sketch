@@ -1,8 +1,15 @@
 
+main{
+    width: 750px;
+    height: 750px;
+    margin: 10px auto;
+}
+
 .grid{
     display : grid;        
-    border : 2px solid black;
-    height : 400px;
-    width: 400px;
+    border : 100px solid rgb(189, 15, 15);
+    height : 500px;
+    width: 500px;
+    margin: 10px auto;
 }
 
